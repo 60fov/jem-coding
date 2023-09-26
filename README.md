@@ -1,2 +1,2 @@
-# jem-coding
+# Jem Coding
 make education great again
