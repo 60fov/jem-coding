@@ -5,6 +5,8 @@
 :root {
   --space-cadet: #8145ff;
   --golden-yellow: #ffe606;
+
+  --font-serif: Arial, Helvetica, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
