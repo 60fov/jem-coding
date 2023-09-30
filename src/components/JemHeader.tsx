@@ -2,17 +2,19 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-import styles from "./JemHeader.module.scss";
-import JemLogo from "./JemLogo";
 import { motion } from "framer-motion";
 
+import JemCodingLogo from "./JemCodingLogo";
+import JemLogo from "./JemLogo";
+
+import styles from "./JemHeader.module.scss";
 
 export default function JemHeader() {
     return (
-        <div className="h-24 flex">
-            <div className="flex-1">
-                {/* <JemLogo size={64}/> */}
+        <div className="flex shrink-0 grow-0 p-4">
+            <div className="flex-1 flex items-center">
+                <JemLogo size={96} />
+                {/* <JemCodingLogo size={96}/> */}
             </div>
             <div className="flex-1 flex items-center justify-center">
                 <JemNav />
@@ -39,7 +41,7 @@ function JemNav() {
                 routes.map(route => {
                     const isActive = route === pathname
                     return (
-                        <Link href={route}>
+                        <Link key={route} href={route}>
                             <div data-jem-nav-link data-active={isActive}>
                                 {isActive && <motion.div data-active-link-indicator layoutId="active-link-indicator" />}
                                 <span data-nav-label>{route.slice(1)}</span>

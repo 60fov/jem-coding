@@ -5,7 +5,7 @@ import { Barlow_Condensed, Bebas_Neue, Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const bebas_nueue = Bebas_Neue({ subsets: ['latin'], weight: ['400'], variable: '--font-bebas-nueue' })
-const barlow_condensed = Barlow_Condensed({ subsets: ['latin'], weight: ["600"], variable: '--font-barlow-condensed' })
+const barlow_condensed = Barlow_Condensed({ subsets: ['latin'], weight: ["400", "500", "600"], variable: '--font-barlow-condensed' })
 
 export const metadata: Metadata = {
   title: 'Jem Coding',

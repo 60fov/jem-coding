@@ -1,10 +1,9 @@
 "use client"
+import { CSSProperties } from "react"
 
 import Primitives from "@/assets/primitives.svg"
-import { motion } from "framer-motion"
 
 import styles from "./JemDeck.module.scss"
-import { CSSProperties } from "react"
 
 // TODO infinity card
 
@@ -12,15 +11,14 @@ export default function JemDeck(props: { cardCount: number, gap: number, childre
 
 
     return (
-        <motion.div className={styles.jemdeck}>
+        <div className={styles.jemdeck}>
             {Array
                 .from({ length: props.cardCount })
                 .map((_, i) => {
                     const isLastCard = i === props.cardCount - 1
                     return (
-                        <motion.div
+                        <div data-jem-card
                             key={`${i}`}
-                            data-jem-card
                             style={{
                                 left: i * props.gap,
                                 top: i * -props.gap,
@@ -29,15 +27,15 @@ export default function JemDeck(props: { cardCount: number, gap: number, childre
                         >
                             {isLastCard &&
                                 <>
-                                    <div className="grow flex items-center justify-center">
+                                    <div data-card-art>
                                         <Primitives />
                                     </div>
-                                    <p className="font-semibold text-2xl">{props.children}</p>
+                                    <p data-card-label>{props.children}</p>
                                 </>
                             }
-                        </motion.div>
+                        </div>
                     )
                 })}
-        </motion.div>
+        </div>
     )
 }
