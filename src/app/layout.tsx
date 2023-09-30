@@ -1,8 +1,11 @@
+import JemHeader from '@/components/JemHeader'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Barlow_Condensed, Bebas_Neue, Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const bebas_nueue = Bebas_Neue({ subsets: ['latin'], weight: ['400'], variable: '--font-bebas-nueue' })
+const barlow_condensed = Barlow_Condensed({ subsets: ['latin'], weight: ["600"], variable: '--font-barlow-condensed' })
 
 export const metadata: Metadata = {
   title: 'Jem Coding',
@@ -20,7 +23,12 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.variable} ${bebas_nueue.variable} ${barlow_condensed.variable}`}>
+        <div className="w-screen h-screen flex flex-col items-stretch">
+          <JemHeader />
+          {children}
+        </div>
+      </body>
     </html>
   )
 }

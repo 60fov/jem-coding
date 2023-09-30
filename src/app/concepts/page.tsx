@@ -1,9 +1,9 @@
-import JemLogo from "@/components/JemLogo";
+import JemDeck from "@/components/JemDeck";
 
 export default function Page() {
   return (
     <main className="w-full h-full flex flex-col items-center justify-center">
-      <JemLogo />
+      <JemDeck gap={12} cardCount={4}>Programming Primitives</JemDeck>
     </main>
   )
 }

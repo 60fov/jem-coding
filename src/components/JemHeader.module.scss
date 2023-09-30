@@ -1,0 +1,40 @@
+.jemnav {
+  isolation: isolate;
+  display: flex;
+  gap: 4px;
+  align-items: stretch;
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  padding: 4px;
+  width: fit-content;
+  font-family: var(--font-bebas-nueue);
+  font-size: 24px;
+
+  [data-jem-nav-link] {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--space-cadet);
+    padding: 6px;
+    transition: color 150ms ease-in;
+
+    line-height: 1;
+
+    &[data-active="true"] {
+        color: white;
+    }
+}
+
+[data-nav-label] {
+    z-index: 10;
+  }
+
+  [data-active-link-indicator] {
+    border-radius: 8px;
+    position: absolute;
+    inset: 0;
+    background: var(--space-cadet);
+  }
+}

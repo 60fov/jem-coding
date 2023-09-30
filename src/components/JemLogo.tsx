@@ -1,6 +1,6 @@
 "use client"
 
-import Logo from "../../public/logo.svg"
+import Logo from "../../public/jemlogo.svg"
 
 export default function KotaLogo(props: { size?: number | string }) {
     const {
@@ -8,7 +8,7 @@ export default function KotaLogo(props: { size?: number | string }) {
     } = props
 
     return (
-        <div style={{ fontSize: size }}>
+        <div style={{ width: "1em", height: "1em", fontSize: size }}>
             <Logo />
         </div>
     )

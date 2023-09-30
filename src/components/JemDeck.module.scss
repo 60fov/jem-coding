@@ -1,0 +1,42 @@
+.jemdeck {
+  position: relative;
+  width: 240px;
+  aspect-ratio: 2/3;
+  cursor: pointer;
+
+  &:hover [data-jem-card] {
+    transform: translate(6px, -6px);
+    &:first-child {
+      box-shadow: -14px 14px 0 rgba(0 0 0 / 0.5);
+    }
+  }
+
+  [data-jem-card] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+    border: 5px solid white;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    background: var(--space-cadet);
+    transition: all 200ms var(--ease-out-back);
+    transition-delay: var(--jem-card-transition-delay);
+
+    &:first-child {
+      box-shadow: var(--shadow-md);
+    }
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .jemdeck {
+    [data-jem-card] {
+      transition: none;
+      &:first-child {
+        box-shadow: -14px 14px 0 rgba(0 0 0 / 0.5);
+      }
+    }
+  }
+}
