@@ -11,9 +11,9 @@ import styles from "./JemHeader.module.scss";
 
 export default function JemHeader() {
     return (
-        <div className="flex shrink-0 grow-0 p-4">
+        <div className="flex shrink-0 grow-0 p-4 h-24">
             <div className="flex-1 flex items-center">
-                <JemLogo size={96} />
+                <JemLogo height={"100%"} />
                 {/* <JemCodingLogo size={96}/> */}
             </div>
             <div className="flex-1 flex items-center justify-center">

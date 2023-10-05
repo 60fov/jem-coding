@@ -1,13 +1,13 @@
 "use client"
 import { CSSProperties } from "react"
 
-import Primitives from "@/assets/primitives.svg"
+
 
 import styles from "./JemDeck.module.scss"
 
 // TODO infinity card
 
-export default function JemDeck(props: { cardCount: number, gap: number, children: React.ReactNode }) {
+export default function JemDeck(props: { cardCount: number, gap: number, art: React.ReactNode, children: React.ReactNode }) {
 
 
     return (
@@ -28,7 +28,7 @@ export default function JemDeck(props: { cardCount: number, gap: number, childre
                             {isLastCard &&
                                 <>
                                     <div data-card-art>
-                                        <Primitives />
+                                        {props.art}
                                     </div>
                                     <p data-card-label>{props.children}</p>
                                 </>
