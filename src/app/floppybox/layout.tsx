@@ -1,12 +1,12 @@
 import Script from "next/script"
 
-export default function FlappyBoxLayout(props: {
+export default function FloppyBoxLayout(props: {
   children: React.ReactNode
 }) {
   return (
     <>
       {props.children}
-      <Script src="/flappy-box.js" />
+      <Script src="/floppy-box.js" />
     </>
   )
 }
