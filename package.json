@@ -9,10 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^9.88.2",
+    "@react-three/fiber": "^8.14.5",
+    "@types/three": "^0.157.0",
     "framer-motion": "^10.16.4",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "three": "^0.157.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
@@ -25,6 +29,6 @@
     "postcss": "latest",
     "sass": "^1.68.0",
     "tailwindcss": "latest",
-    "typescript": "latest"
+    "typescript": "^5.2.2"
   }
 }

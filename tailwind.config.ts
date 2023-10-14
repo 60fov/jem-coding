@@ -8,6 +8,7 @@ const config: Config = {
   ],
   theme: {
     boxShadow: {
+      xs: '-2px 2px 0 rgb(0 0 0 / 0.5)',
       sm: '-4px 4px 0 rgb(0 0 0 / 0.5)',
       DEFAULT: '-6px 6px 0 rgb(0 0 0 / 0.5)',
       md: '-8px 8px 0 rgb(0 0 0 / 0.5)',
