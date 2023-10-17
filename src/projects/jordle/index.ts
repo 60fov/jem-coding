@@ -33,6 +33,6 @@ export function guessedCorrect(state: JordleState) {
 
 }
 
-function randomWord() {
+export function randomWord() {
     return wordlist[Math.floor(Math.random() * wordlist.length)];
 }
