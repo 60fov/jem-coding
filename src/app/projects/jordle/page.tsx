@@ -1,5 +1,5 @@
 "use client";
-import * as Jordle from "@/projects/jordle";
+// import * as Jordle from "@/projects/jordle";
 import { useEffect, useRef, useState } from "react";
 
 export default function JordlePage() {
@@ -29,7 +29,23 @@ function JordleRenderer() {
       <h1 className="text-3xl p-6">Jordle</h1>
       <div>{jordle.jord}</div>
       <div className="flex flex-col gap-1">
-        {jordle.guesses.map((guess) => {
+        {
+          // number of guess
+          Array.from({length: 5}).map((_, i) => {
+            return (
+              <div className="flex gap-1">
+                {
+                  Array.from({length: 5}).map((_, j) => {
+                    return (
+                      <div className="flex gap-1 bg-white/50 rounded w-4 h-6">{jordle.guesses[i][j]}</div>
+                      )
+                    })
+                  }
+              </div>
+            )
+          })
+        }
+        {/* {jordle.guesses.map((guess) => {
           // TODO guess letter logic
           return (
             <div className="flex gap-1">
@@ -39,7 +55,7 @@ function JordleRenderer() {
             </div>
           )
           // return <div>{guess || "?"}</div>;
-        })}
+        })} */}
       </div>
       <input
         className="bg-transparent border-2 border-white/50 rounded p-2 leading-none outline-none focus-visible:border-white"
